@@ -10,8 +10,23 @@ body {
 header {
     background-color: #3498db;
     color: #fff;
-    padding: 1em;
     text-align: center;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon{
+    width: 50px;
+    margin-left: 1px;
+}
+
+h1{
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 25px;
 }
 
 .content {
@@ -21,10 +36,6 @@ header {
     margin-bottom: 70px;
 }
 
-h2{
-    text-align: center;
-}
-
 form {
     width: 450px;
     background-color: #fff;
@@ -32,6 +43,7 @@ form {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     text-align: center;
+    margin-top: 30px;
 }
 
 select, input {
@@ -41,21 +53,21 @@ select, input {
 }
 
 button {
-    padding: 15px;
+    width: 150px;
+    padding: 12px;
     background-color: #3c6fe7;
     color: #fff;
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
-    width: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.8s ease;
     box-sizing: border-box;
     margin-top: 20px;
 }
 
 button:hover {
     background-color: #1d58e0;
-
+    transform: scale(1.1);
 }
 
 #resultado {
@@ -64,7 +76,7 @@ button:hover {
     padding: 10px;
     border-radius: 10px;
     text-align: center;
-    min-height: 150px;
+    min-height: 250px;
 }
 
 .combinacao{
@@ -80,11 +92,23 @@ button:hover {
     align-items: center;
     justify-content: center;
     margin: 0 5px;
+    color: #fff;
+    box-shadow: 0 2px 3px rgba(147, 147, 147, 0.9);
+    transition: transform 0.3s ease;
+}
+
+.bola:hover {
+    transform: scale(1.2);
+    cursor: pointer;
 }
 
 a{
     text-decoration: none;
     color: #000;
+}
+
+a:hover{
+    text-decoration: underline;
 }
 
 footer {
