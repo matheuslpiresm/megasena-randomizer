@@ -5,30 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+
+    <title>Número da Sorte</title>
 </head>
 
 <body>
-<header>
-    <h1>M E G A S E N A</h1>
-</header>
+    <header>
+        <h1>M E G A S E N A</h1>
+    </header>
 
     <main>
         <section class="content">
-            <h2> Gerador de números para a megasena</h2>
+            <h2>Gerador de números</h2>
             <form>
-                <label for="combinacoes">Digite a quantidade de combinações:</label>
-                <input type="number" id="combinacoes" name="combinacoes">
-                <button type="button" onclick="gerarCombinacoes()">Gerar Combinações</button>
+                <div>
+                    <label for="combinacoes">Escolha a quantidade de combinações:</label>
+                    <select id="combinacoes" name="combinacoes">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+
+                <div class="opcoes">
+                    <label for="todos">Todos os números</label>
+                    <input type="radio" id="todos" name="tipo" value="todos" checked>
+                </div>
+
+                <div class="opcoes">
+                    <label for="pares">Somente pares     </label>
+                    <input type="radio" id="pares" name="tipo" value="pares">
+                </div>
+
+                <div class="opcoes">
+                    <label for="impares">Somente ímpares </label>
+                    <input type="radio" id="impares" name="tipo" value="impares">
+                </div>
+
+                <div>
+                    <button type="button" onclick="gerarCombinacoes()">Gerar Combinações</button>
+                </div>
+
                 <div id="resultado"></div>
             </form>
+
         </section>
     </main>
-    <script src="script.js"></script>
 
     <footer>
-        <p>Desenvolvido por <a href="https://www.linkedin.com/in/matheuslpires/" target="_blank"> Matheus Pires</a></p>
+        <p>Desenvolvido por <a href="https://www.linkedin.com/in/matheuslpires/" target="_blank">Matheus Pires</a></p>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
