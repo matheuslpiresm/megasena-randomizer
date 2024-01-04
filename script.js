@@ -12,17 +12,18 @@ function gerarCombinacoes() {
 }
 
 function gerarNumeros(tipo) {
-    const todosNumeros = Array.from({ length: 6 }, () => ('0' + Math.floor(Math.random() * 60 + 1)).slice(-2));
-    
-    if (tipo === 'todos') {
-        return todosNumeros.sort();
-    } else if (tipo === 'pares' || tipo === 'impares') {
-        const numerosSemRepeticao = new Set();
-        while (numerosSemRepeticao.size < 6) {
-            const numero = tipo === 'pares' ? 2 * Math.floor(Math.random() * 30 + 1) : 2 * Math.floor(Math.random() * 30) + 1;
-            numerosSemRepeticao.add(('0' + numero).slice(-2));
+    let numerosSemRepeticao = new Set();
+    while (numerosSemRepeticao.size < 6) {
+        let numero;
+        if (tipo === 'todos') {
+            numero = Math.floor(Math.random() * 60 + 1);
+        } else if (tipo === 'pares') {
+            numero = 2 * Math.floor(Math.random() * 30 + 1);
+        } else if (tipo === 'impares') {
+            numero = 2 * Math.floor(Math.random() * 30) + 1;
         }
-        return Array.from(numerosSemRepeticao).sort();
+        numerosSemRepeticao.add(('0' + numero).slice(-2));
     }
+    return Array.from(numerosSemRepeticao).sort();
 }
 
